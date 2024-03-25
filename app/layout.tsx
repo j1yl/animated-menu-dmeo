@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { EB_Garamond, Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/navbar";
 
 // const inter = Inter({ subsets: ["latin"] });
 const garamond = EB_Garamond({ subsets: ["latin"] });
@@ -18,10 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={garamond.className}>
-        <Navbar />
-        {children}
-      </body>
+      <body className={garamond.className}>{children}</body>
     </html>
   );
 }
